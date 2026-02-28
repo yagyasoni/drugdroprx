@@ -531,11 +531,11 @@ export default function Home() {
 
           <div className="border-t border-gray-200 pt-6 md:pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-[12px] md:text-[14px] text-gray-400 order-2 md:order-1">
-              © 2025 Drug Drop Rx. All rights reserved.
+              © {new Date().getFullYear()} Drug Drop Rx. All rights reserved.
             </p>
             <div className="flex gap-4 order-1 md:order-2">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/drug-drop-rx"
                 className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-[#243b8f] transition-all group"
               >
                 <Linkedin
@@ -547,7 +547,7 @@ export default function Home() {
                 href="#"
                 className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-[#243b8f] transition-all group"
               >
-                <span className="w-4 h-4 flex items-center justify-center text-gray-500 group-hover:text-white text-[12px] font-bold">
+                <span className="w-4 h-4 flex items-center justify-center text-gray-500 group-hover:text-white text-[16px] font-bold">
                   X
                 </span>
               </a>
