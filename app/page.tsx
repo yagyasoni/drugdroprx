@@ -1,18 +1,17 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import {
   Check,
   Shield,
   FileCheck,
-  Clock,
   CodeXml,
   Forklift,
   ShieldCheck,
   Linkedin,
   Menu,
   X,
+  TrendingUp,
 } from "lucide-react";
 import home1 from "@/public/home1.svg";
 import home2 from "@/public/home2.svg";
@@ -351,7 +350,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#ffb020]/10 flex items-center justify-center mt-0.5">
-                      <Clock
+                      <TrendingUp
                         className="w-4 h-4 text-[#ffb020]"
                         strokeWidth={2.5}
                       />
