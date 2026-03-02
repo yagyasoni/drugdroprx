@@ -145,12 +145,13 @@ export default function Home() {
             <div className="flex flex-col md:flex-row sm:items-center gap-8 md:gap-16">
               <div className="flex-1 w-full">
                 <h1 className="text-[32px] md:text-[56px] font-bold text-[#243b8f] leading-tight tracking-tight mb-4 md:mb-6 text-center md:text-left">
-                  Secure Software & Logistics for Healthcare
+                  Advancing Healthcare Compliance & Revenue Growth
                 </h1>
                 <p className="text-[16px] md:text-[20px] text-gray-400 leading-relaxed mb-6 md:mb-10 max-w-[540px] text-center md:text-left mx-auto md:mx-0">
-                  Streamline your pharmaceutical supply chain with specialized
-                  IT services, comprehensive routing logistics, and rock-solid
-                  compliance infrastructure.
+                  Expert pharmacy billing, regulatory compliance, digital
+                  services, prior authorization support, audits, reporting, and
+                  revenue growth consulting—built for safe, compliant
+                  operations.
                 </p>
                 {/* FIX 1: Mobile — centered, stacked, full-width. Desktop — left-aligned row */}
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center md:items-start justify-center md:justify-start">
@@ -183,9 +184,9 @@ export default function Home() {
                 Comprehensive Solutions for Healthcare
               </h2>
               <p className="text-[14px] md:text-[18px] text-gray-400 leading-relaxed">
-                We bridge the gap between complex software systems and physical
-                logistics, ensuring safe and compliant delivery of sensitive
-                materials.
+                Trusted consultants and specialists for pharmacies and
+                healthcare practices in the U.S.—focused on compliant billing,
+                operational excellence, analytics support, and digital growth.
               </p>
             </div>
 
@@ -319,12 +320,11 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-20">
               <div className="flex-1">
                 <h2 className="text-[28px] md:text-[36px] font-bold text-[#243b8f] tracking-tight leading-tight mb-4 md:mb-6">
-                  Built-in compliance and security
+                  Reporting & Analytics Assistance
                 </h2>
                 <p className="text-[14px] md:text-[18px] text-gray-400 leading-relaxed mb-6 md:mb-8">
-                  Don't let regulatory requirements slow down your operations.
-                  Drug Drop Rx integrates compliance checks directly into your
-                  workflows.
+                  Guidance in generating and interpreting pharmacy operational
+                  reports and performance analytics.
                 </p>
                 <div className="space-y-3 md:space-y-4">
                   <div className="flex items-start gap-3">
@@ -346,7 +346,7 @@ export default function Home() {
                       />
                     </div>
                     <p className="text-[14px] md:text-[16px] font-medium text-gray-900">
-                      DEA reporting and electronic 222 form integration
+                      Expert support for audits and financial reporting
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
@@ -357,7 +357,7 @@ export default function Home() {
                       />
                     </div>
                     <p className="text-[14px] md:text-[16px] font-medium text-gray-900">
-                      Immutable audit logs for all system actions
+                      Financial vs operational performance metrics
                     </p>
                   </div>
                 </div>
@@ -410,9 +410,10 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-[13px] md:text-[15px] text-gray-400 leading-relaxed">
-                Providing industry-leading software development, secure
-                logistics, and compliance solutions for the modern healthcare
-                supply chain.
+                Helping independent pharmacies and healthcare practices
+                streamline business functions through billing support,
+                consultative guidance, compliance expertise, reporting insights,
+                staffing support, and digital marketing tailored to healthcare
               </p>
             </div>
 
