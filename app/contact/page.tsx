@@ -48,10 +48,10 @@ export default function Contact() {
                   </h3>
                   <p className="text-[14px] md:text-[16px] font-semibold text-gray-700">
                     <a
-                      href="tel:+918050570255"
+                      href="tel:+15512296466"
                       className="hover:text-[#243b8f] transition-colors break-all"
                     >
-                      +91 80505 70255
+                      +1 (551) 229-6466
                     </a>
                   </p>
                 </div>
@@ -68,10 +68,10 @@ export default function Contact() {
                   </h3>
                   <p className="text-[14px] md:text-[16px] font-semibold text-gray-700">
                     <a
-                      href="mailto:support@drugdroprx.com"
+                      href="mailto:Info@drugdroprx.com"
                       className="hover:text-[#243b8f] transition-colors"
                     >
-                      support@drugdroprx.com
+                      Info@drugdroprx.com
                     </a>
                   </p>
                 </div>
@@ -87,7 +87,7 @@ export default function Contact() {
                     Business Hours
                   </h3>
                   <p className="text-[14px] md:text-[16px] font-semibold text-gray-700">
-                    Monday – Friday, 10 AM – 6 PM IST
+                    Monday – Friday, 9 AM – 6 PM EST
                   </p>
                 </div>
               </div>
@@ -160,17 +160,17 @@ export default function Contact() {
                 <p className="text-[14px] md:text-[16px] text-gray-700 leading-relaxed">
                   For refund or cancellation requests, please contact us at{" "}
                   <a
-                    href="mailto:support@drugdroprx.com"
+                    href="mailto:Info@drugdroprx.com"
                     className="text-[#243b8f] font-semibold hover:underline"
                   >
-                    support@drugdroprx.com
+                    Info@drugdroprx.com
                   </a>{" "}
                   or call{" "}
                   <a
-                    href="tel:+918050570255"
+                    href="tel:+15512296466"
                     className="text-[#243b8f] font-semibold hover:underline"
                   >
-                    +91 80505 70255
+                    +1 (551) 229-6466
                   </a>
                 </p>
               </div>
@@ -189,13 +189,13 @@ export default function Contact() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 items-center justify-center">
               <a
-                href="tel:+918050570255"
+                href="tel:+15512296466"
                 className="w-full sm:w-auto px-6 py-3 bg-white text-[#243b8f] rounded-md font-semibold text-[14px] md:text-[15px] hover:bg-gray-100 transition-all text-center"
               >
                 Call Support
               </a>
               <a
-                href="mailto:support@drugdroprx.com"
+                href="mailto:Info@drugdroprx.com"
                 className="w-full sm:w-auto px-6 py-3 bg-[#ffb020] text-gray-900 rounded-md font-semibold text-[14px] md:text-[15px] hover:bg-[#f5a815] transition-all text-center"
               >
                 Email Support

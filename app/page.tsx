@@ -14,8 +14,8 @@ import {
   TrendingUp,
 } from "lucide-react";
 import home1 from "@/public/home1.svg";
-import home2 from "@/public/home2.svg";
-import home3 from "@/public/home3.svg";
+import home2 from "@/public/home2.png";
+import home3 from "@/public/home3.png";
 import Link from "next/link";
 
 export default function Home() {
@@ -72,9 +72,9 @@ export default function Home() {
 
           {/* FIX 2: Desktop CTA buttons — only show on md+, Contact Us only once */}
           <div className="hidden md:flex items-center gap-3 flex-shrink-0">
-            <button className="px-4 py-2.5 border-2 border-[#243b8f] text-[#243b8f] rounded-md font-semibold text-[13px] lg:text-[15px] hover:bg-[#243b8f] hover:text-white transition-all whitespace-nowrap">
+            {/* <button className="px-4 py-2.5 border-2 border-[#243b8f] text-[#243b8f] rounded-md font-semibold text-[13px] lg:text-[15px] hover:bg-[#243b8f] hover:text-white transition-all whitespace-nowrap">
               Client Portal
-            </button>
+            </button> */}
             <Link href="/contact">
               <button className="cursor-pointer px-4 lg:px-6 py-2.5 lg:py-3 bg-[#243b8f] text-white rounded-md font-semibold text-[13px] lg:text-[15px] hover:bg-[#1e3176] transition-all whitespace-nowrap">
                 Contact Us
@@ -123,9 +123,9 @@ export default function Home() {
               >
                 Company
               </a>
-              <button className="w-full px-4 py-2.5 border-2 border-[#243b8f] text-[#243b8f] rounded-md font-semibold text-[14px] hover:bg-[#243b8f] hover:text-white transition-all mt-2">
+              {/* <button className="w-full px-4 py-2.5 border-2 border-[#243b8f] text-[#243b8f] rounded-md font-semibold text-[14px] hover:bg-[#243b8f] hover:text-white transition-all mt-2">
                 Client Portal
-              </button>
+              </button> */}
               <Link href="/contact" className="w-full">
                 <button className="w-full px-4 py-2.5 bg-[#243b8f] text-white rounded-md font-semibold text-[14px] hover:bg-[#1e3176] transition-all">
                   Contact Us
@@ -189,62 +189,125 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {/* Service Card Template Applied to All */}
+
               {/* Service 1 */}
-              <div className="bg-white border border-gray-200/80 rounded-lg p-6 md:p-10 hover:shadow-lg transition-shadow">
-                <div className="w-14 h-14 bg-slate-100 rounded-md flex items-center justify-center mb-4 md:mb-6">
-                  <CodeXml
-                    className="w-7 h-7"
-                    strokeWidth={2.33}
-                    color="#243B8F"
-                  />
-                </div>
-                <h3 className="text-[18px] md:text-[22px] font-bold text-[#243b8f] mb-3 md:mb-4">
-                  Software Development
+              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
+                  Pharmacy Billing Services
                 </h3>
-                <p className="text-[14px] md:text-[16px] text-gray-400 leading-relaxed">
-                  Custom IT solutions tailored for healthcare providers,
-                  pharmacies, and distributors. Build secure, scalable
-                  applications that integrate seamlessly with your existing
-                  infrastructure.
+                <p className="text-md text-gray-500 leading-relaxed">
+                  Comprehensive support to improve claims accuracy, reduce
+                  denials, optimize reimbursements, and maintain compliant
+                  billing operations.
                 </p>
               </div>
 
               {/* Service 2 */}
-              <div className="bg-white border border-gray-200/80 rounded-lg p-6 md:p-10 hover:shadow-lg transition-shadow">
-                <div className="w-14 h-14 bg-slate-100 rounded-md flex items-center justify-center mb-4 md:mb-6">
-                  <Forklift
-                    className="w-7 h-7"
-                    strokeWidth={2.33}
-                    color="#243B8F"
-                  />
-                </div>
-                <h3 className="text-[18px] md:text-[22px] font-bold text-[#243b8f] mb-3 md:mb-4">
-                  Secure Logistics
+              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
+                  Compliance Services
                 </h3>
-                <p className="text-[14px] md:text-[16px] text-gray-400 leading-relaxed">
-                  End-to-end tracking and routing algorithms specifically
-                  designed for sensitive pharmaceuticals. Maintain complete
-                  visibility from origin to destination with real-time alerts.
+                <p className="text-md text-gray-500 leading-relaxed">
+                  Strategic compliance assistance to help pharmacies and
+                  practices establish compliance frameworks with applicable
+                  regulations.
                 </p>
               </div>
 
               {/* Service 3 */}
-              <div className="bg-white border border-gray-200/80 rounded-lg p-6 md:p-10 hover:shadow-lg transition-shadow">
-                <div className="w-14 h-14 bg-slate-100 rounded-md flex items-center justify-center mb-4 md:mb-6">
-                  <ShieldCheck
-                    className="w-7 h-7"
-                    strokeWidth={2.33}
-                    color="#243B8F"
-                  />
-                </div>
-                <h3 className="text-[18px] md:text-[22px] font-bold text-[#243b8f] mb-3 md:mb-4">
-                  Regulatory Compliance
+              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
+                  Prior Authorization Support
                 </h3>
-                <p className="text-[14px] md:text-[16px] text-gray-400 leading-relaxed">
-                  Stay ahead of DEA, HIPAA, and state-level regulations. Our
-                  systems automatically generate required audit trails,
-                  verification documents, and compliance reporting.
+                <p className="text-md text-gray-500 leading-relaxed">
+                  Assistance navigating prior authorization processes to support
+                  timely medication access. Tracking, documentation support,
+                  etc.
+                </p>
+              </div>
+
+              {/* Service 4 */}
+              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
+                  Audit Assistance
+                </h3>
+                <p className="text-md text-gray-500 leading-relaxed">
+                  Assistance for pharmacy readiness before and during payer,
+                  PBM, or regulatory audits. Interpretation of audit results,
+                  etc.
+                </p>
+              </div>
+
+              {/* Service 5 */}
+              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
+                  Website Development
+                </h3>
+                <p className="text-md text-gray-500 leading-relaxed">
+                  Custom websites built for healthcare practices with a focus on
+                  usability, compliance, and patient engagement. HIPAA-aware
+                  development practices.
+                </p>
+              </div>
+
+              {/* Service 6 */}
+              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
+                  Digital Marketing Assistance
+                </h3>
+                <p className="text-md text-gray-500 leading-relaxed">
+                  Marketing support designed for healthcare brands while
+                  maintaining compliance with advertising and privacy
+                  expectations.
+                </p>
+              </div>
+
+              {/* Service 7 */}
+              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
+                  Report Assistance
+                </h3>
+                <p className="text-md text-gray-500 leading-relaxed">
+                  Guidance in generating and interpreting pharmacy operational
+                  reports. PAYOR and PBM performance dashboards.
+                </p>
+              </div>
+
+              {/* Service 8 */}
+              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
+                  Profit Buildup
+                </h3>
+                <p className="text-md text-gray-500 leading-relaxed">
+                  Consultative guidance to help pharmacies analyze revenue
+                  drivers, and increase financial performance. Prescription
+                  trend analysis.
+                </p>
+              </div>
+
+              {/* Service 9 */}
+              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
+                  Staffing Assistance
+                </h3>
+                <p className="text-md text-gray-500 leading-relaxed">
+                  Assistance with sourcing, evaluating, and onboarding qualified
+                  pharmacy team members. support staffing strategy and candidate
+                  readiness.
+                </p>
+              </div>
+
+              {/* Service 10 */}
+              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
+                  Consultation Services
+                </h3>
+                <p className="text-md text-gray-500 leading-relaxed">
+                  Personalized consulting for pharmacy owners, managers, and
+                  leadership teams. Work on unique challenges and strategic
+                  recommendations.
                 </p>
               </div>
             </div>
@@ -266,12 +329,12 @@ export default function Home() {
               </div>
               <div className="flex-1 order-1 md:order-2">
                 <h2 className="text-[28px] md:text-[36px] font-bold text-[#243b8f] tracking-tight leading-tight mb-4 md:mb-6">
-                  Precision logistics for sensitive shipments
+                  Pharmacy Billing & Revenue Cycle Support
                 </h2>
                 <p className="text-[14px] md:text-[18px] text-gray-400 leading-relaxed mb-6 md:mb-8">
-                  Transporting pharmaceuticals requires more than just moving
-                  boxes. It requires verifiable chain-of-custody, temperature
-                  monitoring, and secure handoffs.
+                  Comprehensive support to improve claims accuracy, reduce
+                  denials, optimize reimbursements, and maintain compliant
+                  billing operations.
                 </p>
                 <div className="space-y-3 md:space-y-4">
                   <div className="flex items-start gap-3">
@@ -282,7 +345,8 @@ export default function Home() {
                       />
                     </div>
                     <p className="text-[14px] md:text-[16px] font-medium text-gray-900">
-                      Real-time GPS tracking and routing optimization
+                      Claims Review & Submission Assistance — Review, verify,
+                      and assist with pharmacy claim submissions across payors.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
@@ -293,7 +357,9 @@ export default function Home() {
                       />
                     </div>
                     <p className="text-[14px] md:text-[16px] font-medium text-gray-900">
-                      Automated delivery verification and e-signatures
+                      Denial Mitigation — Identify common billing errors and
+                      implement corrective strategies to reduce PBM denials and
+                      rejected claims.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
@@ -304,10 +370,17 @@ export default function Home() {
                       />
                     </div>
                     <p className="text-[14px] md:text-[16px] font-medium text-gray-900">
-                      Exceptions management and instant delay alerts
+                      Coding & Reimbursement Optimization — Audit and refine
+                      NDC/DAW/HCPCS data to align with payer requirements.
                     </p>
                   </div>
                 </div>
+                <p className="text-[13px] text-gray-500 mt-6">
+                  <strong>Compliance Notes:</strong> All billing support is
+                  conducted in accordance with payer rules and federal/state
+                  billing requirements. Our processes are designed to align with
+                  industry standards and acceptable billing practices.
+                </p>
               </div>
             </div>
           </div>
@@ -319,11 +392,12 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-20">
               <div className="flex-1">
                 <h2 className="text-[28px] md:text-[36px] font-bold text-[#243b8f] tracking-tight leading-tight mb-4 md:mb-6">
-                  Reporting & Analytics Assistance
+                  Pharmacy Regulatory Compliance & Risk Management
                 </h2>
                 <p className="text-[14px] md:text-[18px] text-gray-400 leading-relaxed mb-6 md:mb-8">
-                  Guidance in generating and interpreting pharmacy operational
-                  reports and performance analytics.
+                  Strategic compliance assistance to help pharmacies and
+                  practices establish, evaluate, and strengthen compliance
+                  frameworks with applicable regulations.
                 </p>
                 <div className="space-y-3 md:space-y-4">
                   <div className="flex items-start gap-3">
@@ -334,7 +408,8 @@ export default function Home() {
                       />
                     </div>
                     <p className="text-[14px] md:text-[16px] font-medium text-gray-900">
-                      HIPAA compliant data storage and transmission
+                      Compliance Framework Review — Examine current policies
+                      against federal and state pharmacy standards.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
@@ -345,7 +420,20 @@ export default function Home() {
                       />
                     </div>
                     <p className="text-[14px] md:text-[16px] font-medium text-gray-900">
-                      Expert support for audits and financial reporting
+                      Risk Assessment & Documentation — Identify risk areas and
+                      recommend documentation and process improvements.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#ffb020]/10 flex items-center justify-center mt-0.5">
+                      <Check
+                        className="w-4 h-4 text-[#ffb020]"
+                        strokeWidth={2.5}
+                      />
+                    </div>
+                    <p className="text-[14px] md:text-[16px] font-medium text-gray-900">
+                      Policy & Procedure Support — Guide development or
+                      refinement of internal compliance documents.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
@@ -356,17 +444,24 @@ export default function Home() {
                       />
                     </div>
                     <p className="text-[14px] md:text-[16px] font-medium text-gray-900">
-                      Financial vs operational performance metrics
+                      Education & Training — Provide periodic guidance to staff
+                      to reinforce compliance responsibilities.
                     </p>
                   </div>
                 </div>
+
+                <p className="text-[13px] text-gray-500 mt-6">
+                  <strong>Compliance Notes:</strong> Our support is advisory;
+                  enforcement of compliance obligations remains the
+                  responsibility of the pharmacy as required by applicable law.
+                </p>
               </div>
               <div className="flex-1 w-full">
                 <div className="bg-slate-100 rounded-lg overflow-hidden">
                   <img
                     src={home3.src}
                     alt="Compliance Document Checking Software"
-                    className="w-full h-auto"
+                    className="w-full h-auto md:h-[400px] object-cover"
                   />
                 </div>
               </div>
@@ -378,11 +473,11 @@ export default function Home() {
         <section className="bg-[#243b8f] py-16 md:py-24 px-4 md:px-8">
           <div className="max-w-[1280px] mx-auto text-center">
             <h2 className="text-[28px] md:text-[48px] font-bold text-white tracking-tight leading-tight mb-4 md:mb-6">
-              Ready to modernize your infrastructure?
+              Ready to boost revenue growth and finance efficiency?
             </h2>
             <p className="text-[14px] md:text-[20px] text-white/80 leading-relaxed mb-6 md:mb-10 max-w-[600px] mx-auto">
               Join leading healthcare distributors who trust Drug Drop Rx to
-              manage their most critical IT and logistics operations.
+              drive revenue growth while optimizing financial operations.
             </p>
             <button className="px-8 py-3 md:py-4 bg-[#ffb020] text-gray-900 rounded-md font-semibold text-[14px] md:text-[16px] hover:bg-[#f5a815] transition-all inline-block">
               Schedule a Consultation
@@ -543,14 +638,14 @@ export default function Home() {
                   strokeWidth={1.67}
                 />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-[#243b8f] transition-all group"
               >
                 <span className="w-4 h-4 flex items-center justify-center text-gray-500 group-hover:text-white text-[16px] font-bold">
                   X
                 </span>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

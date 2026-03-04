@@ -199,19 +199,19 @@ export default function PrivacyPolicy() {
                     <p className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed">
                       <strong className="text-gray-900">Phone:</strong>{" "}
                       <a
-                        href="tel:+918050570255"
+                        href="tel:+15512296466"
                         className="text-[#243b8f] hover:underline"
                       >
-                        +91 80505 70255
+                        +1 (551) 229-6466
                       </a>
                     </p>
                     <p className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed">
                       <strong className="text-gray-900">Email:</strong>{" "}
                       <a
-                        href="mailto:support@drugdroprx.com"
+                        href="mailto:Info@drugdroprx.com"
                         className="text-[#243b8f] hover:underline"
                       >
-                        support@drugdroprx.com
+                        Info@drugdroprx.com
                       </a>
                     </p>
                     <p className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed">
