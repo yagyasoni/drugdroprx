@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Clock, FileText } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, FileText, Link } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -109,9 +109,11 @@ export default function Contact() {
 
             <div className="space-y-4 md:space-y-6 md:ml-16">
               <div>
-                <h3 className="text-[16px] md:text-[18px] font-bold text-gray-900 mb-2 md:mb-3">
-                  Refunds
-                </h3>
+                <a href="/refund-policy">
+                  <h3 className="underline text-[16px] md:text-[18px] font-bold text-gray-900 mb-2 md:mb-3">
+                    Refunds
+                  </h3>
+                </a>
                 <ul className="space-y-2 ml-4 md:ml-6 list-disc">
                   <li className="text-[14px] md:text-[16px] text-gray-700 leading-relaxed">
                     Payments for completed milestones are non-refundable
@@ -128,9 +130,11 @@ export default function Contact() {
               </div>
 
               <div>
-                <h3 className="text-[16px] md:text-[18px] font-bold text-gray-900 mb-2 md:mb-3">
-                  Cancellations
-                </h3>
+                <a href="/cancellation-policy">
+                  <h3 className="underline text-[16px] md:text-[18px] font-bold text-gray-900 mb-2 md:mb-3">
+                    Cancellations
+                  </h3>
+                </a>
                 <ul className="space-y-2 ml-4 md:ml-6 list-disc">
                   <li className="text-[14px] md:text-[16px] text-gray-700 leading-relaxed">
                     Clients may cancel services with written notice
