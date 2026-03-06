@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function TermsOfService() {
   return (
     <div className="bg-white">
@@ -84,27 +86,30 @@ export default function TermsOfService() {
               </div>
 
               <div className="pb-4 border-b border-slate-100">
-                <h2 className="text-[22px] md:text-[32px] font-bold text-[#243b8f] mb-3 md:mb-4">
-                  4. Refund & Cancellation Policy
-                </h2>
-                <ul className="space-y-2 md:space-y-3 ml-4 md:ml-6">
-                  <li className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed">
-                    • Payments for completed milestones are non-refundable
-                  </li>
-                  <li className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed">
-                    • If a project is cancelled mid-way, payment will be charged
-                    proportionally for work already completed
-                  </li>
-                  <li className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed">
-                    • Subscription services (if any) may be cancelled with prior
-                    notice; unused periods are non-refundable
-                  </li>
-                </ul>
+                <Link href="/refund-policy">
+                  <h2 className="underline text-[22px] md:text-[32px] font-bold text-[#243b8f] mb-3 md:mb-4">
+                    4. Refund Policy
+                  </h2>
+                </Link>
+              </div>
+              <div className="pb-4 border-b border-slate-100">
+                <Link href="/cancellation-policy">
+                  <h2 className="underline text-[22px] md:text-[32px] font-bold text-[#243b8f] mb-3 md:mb-4">
+                    5. Cancellation Policy
+                  </h2>
+                </Link>
+              </div>
+              <div className="pb-4 border-b border-slate-100">
+                <Link href="/subscription-policy">
+                  <h2 className="underline text-[22px] md:text-[32px] font-bold text-[#243b8f] mb-3 md:mb-4">
+                    6. Subscription Policy
+                  </h2>
+                </Link>
               </div>
 
               <div className="pb-4 border-b border-slate-100">
                 <h2 className="text-[22px] md:text-[32px] font-bold text-[#243b8f] mb-3 md:mb-4">
-                  5. Intellectual Property
+                  7. Intellectual Property
                 </h2>
                 <ul className="space-y-2 md:space-y-3 ml-4 md:ml-6">
                   <li className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed">
@@ -120,7 +125,7 @@ export default function TermsOfService() {
 
               <div className="pb-4 border-b border-slate-100">
                 <h2 className="text-[22px] md:text-[32px] font-bold text-[#243b8f] mb-3 md:mb-4">
-                  6. Confidentiality
+                  8. Confidentiality
                 </h2>
                 <p className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed">
                   Both parties agree to keep project-related information
@@ -130,7 +135,7 @@ export default function TermsOfService() {
 
               <div className="pb-4 border-b border-slate-100">
                 <h2 className="text-[22px] md:text-[32px] font-bold text-[#243b8f] mb-3 md:mb-4">
-                  7. Limitation of Liability
+                  9. Limitation of Liability
                 </h2>
                 <p className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed mb-3 md:mb-4">
                   Drug Drop Rx shall not be liable for:
@@ -147,7 +152,7 @@ export default function TermsOfService() {
 
               <div className="pb-4 border-b border-slate-100">
                 <h2 className="text-[22px] md:text-[32px] font-bold text-[#243b8f] mb-3 md:mb-4">
-                  8. Termination
+                  10. Termination
                 </h2>
                 <p className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed mb-3 md:mb-4">
                   We may terminate services if:
@@ -167,7 +172,7 @@ export default function TermsOfService() {
 
               <div className="pb-4 border-b border-slate-100">
                 <h2 className="text-[22px] md:text-[32px] font-bold text-[#243b8f] mb-3 md:mb-4">
-                  9. Governing Law
+                  11. Governing Law
                 </h2>
                 <p className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed">
                   These Terms are governed by the laws of India.
@@ -176,7 +181,7 @@ export default function TermsOfService() {
 
               <div>
                 <h2 className="text-[22px] md:text-[32px] font-bold text-[#243b8f] mb-4 md:mb-6">
-                  10. Contact Information
+                  12. Contact Information
                 </h2>
                 <div className="bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200 rounded-lg p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
                   <h3 className="text-[18px] md:text-[20px] font-bold text-[#243b8f] mb-4 md:mb-6">
@@ -189,7 +194,7 @@ export default function TermsOfService() {
                         href="tel:+15512296466"
                         className="text-[#243b8f] hover:underline"
                       >
-                        +1 (551) 229-6466
+                        +1 (551) 229-6466, +91 80505 70255
                       </a>
                     </p>
                     <p className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed">

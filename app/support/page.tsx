@@ -7,7 +7,7 @@ export default function Contact() {
       <section className="bg-gradient-to-b from-slate-100 to-transparent py-12 md:py-20 px-4 md:px-8">
         <div className="max-w-[900px] mx-auto text-center">
           <h1 className="text-[32px] md:text-[56px] font-bold text-[#243b8f] leading-tight tracking-tight mb-3 md:mb-6">
-            Contact & Support
+            Support
           </h1>
           <p className="text-[16px] md:text-[20px] text-gray-400 leading-relaxed">
             Drug Drop Rx
@@ -51,7 +51,7 @@ export default function Contact() {
                       href="tel:+15512296466"
                       className="hover:text-[#243b8f] transition-colors break-all"
                     >
-                      +1 (551) 229-6466
+                      +1 (551) 229-6466, +91 80505 70255
                     </a>
                   </p>
                 </div>
@@ -170,7 +170,7 @@ export default function Contact() {
                     href="tel:+15512296466"
                     className="text-[#243b8f] font-semibold hover:underline"
                   >
-                    +1 (551) 229-6466
+                    +1 (551) 229-6466, +91 80505 70255
                   </a>
                 </p>
               </div>

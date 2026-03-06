@@ -18,8 +18,69 @@ import home2 from "@/public/home2.png";
 import home3 from "@/public/home3.png";
 import Link from "next/link";
 
+// carousel library for responsive service slider
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // service definitions used by carousel
+  const services = [
+    {
+      title: "Pharmacy Billing Services",
+      description:
+        "Comprehensive support to improve claims accuracy, reduce denials, optimize reimbursements, and maintain compliant billing operations.",
+    },
+    {
+      title: "Compliance Services",
+      description:
+        "Strategic compliance assistance to help pharmacies and practices establish compliance frameworks with applicable regulations.",
+    },
+    {
+      title: "Prior Authorization Support",
+      description:
+        "Assistance navigating prior authorization processes to support timely medication access. Tracking, documentation support, etc.",
+    },
+    {
+      title: "Audit Assistance",
+      description:
+        "Assistance for pharmacy readiness before and during payer, PBM, or regulatory audits. Interpretation of audit results, etc.",
+    },
+    {
+      title: "Website Development",
+      description:
+        "Custom websites built for healthcare practices with a focus on usability, compliance, and patient engagement. HIPAA-aware development practices.",
+    },
+    {
+      title: "Digital Marketing Assistance",
+      description:
+        "Marketing support designed for healthcare brands while maintaining compliance with advertising and privacy expectations.",
+    },
+    {
+      title: "Report Assistance",
+      description:
+        "Guidance in generating and interpreting pharmacy operational reports. PAYOR and PBM performance dashboards.",
+    },
+    {
+      title: "Profit Buildup",
+      description:
+        "Consultative guidance to help pharmacies analyze revenue drivers, and increase financial performance. Prescription trend analysis.",
+    },
+    {
+      title: "Staffing Assistance",
+      description:
+        "Assistance with sourcing, evaluating, and onboarding qualified pharmacy team members. support staffing strategy and candidate readiness.",
+    },
+    {
+      title: "Consultation Services",
+      description:
+        "Personalized consulting for pharmacy owners, managers, and leadership teams. Work on unique challenges and strategic recommendations.",
+    },
+  ];
 
   return (
     <div className="bg-white min-h-screen">
@@ -72,14 +133,16 @@ export default function Home() {
 
           {/* FIX 2: Desktop CTA buttons — only show on md+, Contact Us only once */}
           <div className="hidden md:flex items-center gap-3 flex-shrink-0">
-            {/* <button className="px-4 py-2.5 border-2 border-[#243b8f] text-[#243b8f] rounded-md font-semibold text-[13px] lg:text-[15px] hover:bg-[#243b8f] hover:text-white transition-all whitespace-nowrap">
-              Client Portal
-            </button> */}
-            <Link href="/contact">
-              <button className="cursor-pointer px-4 lg:px-6 py-2.5 lg:py-3 bg-[#243b8f] text-white rounded-md font-semibold text-[13px] lg:text-[15px] hover:bg-[#1e3176] transition-all whitespace-nowrap">
-                Contact Us
+            <Link href="/support">
+              <button className="cursor-pointer px-4 py-2.5 border-2 border-[#243b8f] text-[#243b8f] rounded-md font-semibold text-[13px] lg:text-[15px] hover:bg-[#243b8f] hover:text-white transition-all whitespace-nowrap">
+                Support
               </button>
             </Link>
+            {/* <Link href="/contact"> */}
+            <button className="cursor-pointer px-4 lg:px-6 py-2.5 lg:py-3 bg-[#243b8f] text-white rounded-md font-semibold text-[13px] lg:text-[15px] hover:bg-[#1e3176] transition-all whitespace-nowrap">
+              Contact Us
+            </button>
+            {/* </Link> */}
           </div>
 
           {/* Mobile hamburger */}
@@ -123,14 +186,15 @@ export default function Home() {
               >
                 Company
               </a>
-              {/* <button className="w-full px-4 py-2.5 border-2 border-[#243b8f] text-[#243b8f] rounded-md font-semibold text-[14px] hover:bg-[#243b8f] hover:text-white transition-all mt-2">
-                Client Portal
-              </button> */}
-              <Link href="/contact" className="w-full">
-                <button className="w-full px-4 py-2.5 bg-[#243b8f] text-white rounded-md font-semibold text-[14px] hover:bg-[#1e3176] transition-all">
-                  Contact Us
+              <Link href="/support">
+                <button className="my-1 w-full px-4 py-2.5 border-2 border-[#243b8f] text-[#243b8f] rounded-md font-semibold text-[14px] hover:bg-[#243b8f] hover:text-white transition-all">
+                  Support
                 </button>
               </Link>
+
+              <button className="my-1 w-full px-4 py-2.5 bg-[#243b8f] text-white rounded-md font-semibold text-[14px] hover:bg-[#1e3176] transition-all">
+                Contact Us
+              </button>
             </nav>
           </div>
         )}
@@ -176,7 +240,7 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section className="py-16 md:py-24 px-4 md:px-8">
+        <section className="py-16 md:py-24 px-2 md:px-0">
           <div className="max-w-[1280px] mx-auto">
             <div className="text-center mb-12 md:mb-16 max-w-[800px] mx-auto">
               <h2 className="text-[28px] md:text-[40px] font-bold text-[#243b8f] tracking-tight mb-4 md:mb-5">
@@ -189,127 +253,103 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {/* Service Card Template Applied to All */}
+            <div className="relative px-8 md:px-8">
+              <Swiper
+                modules={[Pagination, Autoplay]}
+                spaceBetween={24}
+                slidesPerView={1}
+                pagination={{ clickable: true }}
+                loop={true}
+                grabCursor={true}
+                // keep height fixed so cards stay uniform across slides
+                // autoHeight removed
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                className="py-4"
+                breakpoints={{
+                  640: { slidesPerView: 2, spaceBetween: 20 },
+                  1024: { slidesPerView: 3, spaceBetween: 24 },
+                  1280: { slidesPerView: 4, spaceBetween: 24 },
+                }}
+              >
+                <div className="mx-8">
+                  {services.map((s) => (
+                    <SwiperSlide key={s.title}>
+                      <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between h-[220px] hover:shadow-lg transition-all duration-300 w-full">
+                        <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3 text-center">
+                          {s.title}
+                        </h3>
+                        <p className="text-md text-gray-500 leading-relaxed text-center">
+                          {s.description}
+                        </p>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </div>
+              </Swiper>
 
-              {/* Service 1 */}
-              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
-                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
-                  Pharmacy Billing Services
-                </h3>
-                <p className="text-md text-gray-500 leading-relaxed">
-                  Comprehensive support to improve claims accuracy, reduce
-                  denials, optimize reimbursements, and maintain compliant
-                  billing operations.
-                </p>
-              </div>
+              <style jsx global>{`
+                .swiper {
+                  padding-bottom: 3rem !important;
+                }
 
-              {/* Service 2 */}
-              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
-                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
-                  Compliance Services
-                </h3>
-                <p className="text-md text-gray-500 leading-relaxed">
-                  Strategic compliance assistance to help pharmacies and
-                  practices establish compliance frameworks with applicable
-                  regulations.
-                </p>
-              </div>
+                .swiper-pagination {
+                  bottom: 0 !important;
+                  position: absolute;
+                  left: 0;
+                  width: 100%;
+                  text-align: center;
+                }
 
-              {/* Service 3 */}
-              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
-                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
-                  Prior Authorization Support
-                </h3>
-                <p className="text-md text-gray-500 leading-relaxed">
-                  Assistance navigating prior authorization processes to support
-                  timely medication access. Tracking, documentation support,
-                  etc.
-                </p>
-              </div>
+                .swiper-pagination-bullet {
+                  width: 8px;
+                  height: 8px;
+                  background: #cbd5e1;
+                  opacity: 1;
+                  border-radius: 9999px;
+                  transition:
+                    width 0.4s ease,
+                    background 0.4s ease;
+                  margin: 0 4px !important;
+                }
 
-              {/* Service 4 */}
-              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
-                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
-                  Audit Assistance
-                </h3>
-                <p className="text-md text-gray-500 leading-relaxed">
-                  Assistance for pharmacy readiness before and during payer,
-                  PBM, or regulatory audits. Interpretation of audit results,
-                  etc.
-                </p>
-              </div>
+                .swiper-pagination-bullet-active {
+                  background: #243b8f;
+                  width: 24px;
+                  border-radius: 9999px;
+                }
 
-              {/* Service 5 */}
-              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
-                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
-                  Website Development
-                </h3>
-                <p className="text-md text-gray-500 leading-relaxed">
-                  Custom websites built for healthcare practices with a focus on
-                  usability, compliance, and patient engagement. HIPAA-aware
-                  development practices.
-                </p>
-              </div>
+                .swiper-button-prev,
+                .swiper-button-next {
+                  color: #243b8f;
+                  top: 50%;
+                  transform: translateY(-60%);
+                  background: none;
+                  border: none;
+                  box-shadow: none;
+                  width: 28px;
+                  height: 28px;
+                }
 
-              {/* Service 6 */}
-              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
-                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
-                  Digital Marketing Assistance
-                </h3>
-                <p className="text-md text-gray-500 leading-relaxed">
-                  Marketing support designed for healthcare brands while
-                  maintaining compliance with advertising and privacy
-                  expectations.
-                </p>
-              </div>
+                .swiper-button-prev {
+                  left: -3rem;
+                }
 
-              {/* Service 7 */}
-              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
-                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
-                  Report Assistance
-                </h3>
-                <p className="text-md text-gray-500 leading-relaxed">
-                  Guidance in generating and interpreting pharmacy operational
-                  reports. PAYOR and PBM performance dashboards.
-                </p>
-              </div>
+                .swiper-button-next {
+                  right: -3rem;
+                }
 
-              {/* Service 8 */}
-              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
-                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
-                  Profit Buildup
-                </h3>
-                <p className="text-md text-gray-500 leading-relaxed">
-                  Consultative guidance to help pharmacies analyze revenue
-                  drivers, and increase financial performance. Prescription
-                  trend analysis.
-                </p>
-              </div>
+                .swiper-button-prev::after,
+                .swiper-button-next::after {
+                  font-size: 1.2rem;
+                  font-weight: 700;
+                  color: #243b8f;
+                }
 
-              {/* Service 9 */}
-              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
-                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
-                  Staffing Assistance
-                </h3>
-                <p className="text-md text-gray-500 leading-relaxed">
-                  Assistance with sourcing, evaluating, and onboarding qualified
-                  pharmacy team members. support staffing strategy and candidate
-                  readiness.
-                </p>
-              </div>
-
-              {/* Service 10 */}
-              <div className="bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col justify-between min-h-[190px] hover:shadow-lg transition-all duration-300">
-                <h3 className="text-md flex items-center justify-center font-semibold text-[#243b8f] mb-3">
-                  Consultation Services
-                </h3>
-                <p className="text-md text-gray-500 leading-relaxed">
-                  Personalized consulting for pharmacy owners, managers, and
-                  leadership teams. Work on unique challenges and strategic
-                  recommendations.
-                </p>
-              </div>
+                .swiper-button-prev:hover::after,
+                .swiper-button-next:hover::after {
+                  color: #1a2d6d;
+                }
+              `}</style>
             </div>
           </div>
         </section>
