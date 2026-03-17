@@ -202,7 +202,7 @@ export default function PrivacyPolicy() {
                         href="tel:+15512296466"
                         className="text-[#243b8f] hover:underline"
                       >
-                        +1 (551) 229-6466
+                        +1 (551) 229-6466, +91 80505 70255
                       </a>
                     </p>
                     <p className="text-[14px] md:text-[16px] text-gray-600 leading-relaxed">
