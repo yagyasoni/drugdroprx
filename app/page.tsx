@@ -27,20 +27,22 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/98 border-b border-gray-200">
         <div className="max-w-[1280px] mx-auto px-4 md:px-8 h-16 md:h-20 flex items-center justify-between gap-4">
           {/* Logo */}
-          <div className="flex items-center flex-shrink-0">
-            <div className="relative">
-              <span className="font-black text-[18px] md:text-[24px] lg:text-[28px] text-[#243b8f] tracking-tight uppercase">
-                DRUG DROP{" "}
-                <span className="relative inline-block">
-                  RX
-                  <span className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#ffb020]"></span>
-                </span>
-              </span>
-              <div className="text-[8px] md:text-[9px] lg:text-[10px] font-semibold text-gray-400 tracking-wider uppercase mt-0.5 hidden sm:block">
-                SOFTWARE DEVELOPMENT AND IT SERVICES
-              </div>
-            </div>
-          </div>
+          <div className="max-w-[1280px] mx-auto px-4 md:px-8 h-16 md:h-20 flex items-center justify-between gap-4">
+  
+  {/* Logo */}
+  <div className="flex items-center flex-shrink-0">
+    <div className="flex items-center flex-shrink-0 -ml-2 md:ml-0">
+  <img
+    src="/logo.png"
+    alt="Drug Drop RX"
+    className="h-10 md:h-12 lg:h-13 w-auto object-contain -translate-x-14"
+  />
+</div>
+
+  </div>
+
+</div>
+
 
           {/* FIX 3: Desktop nav — hidden below md, proper spacing */}
           <nav className="hidden md:flex items-center gap-4 lg:gap-8 flex-1 justify-center">
