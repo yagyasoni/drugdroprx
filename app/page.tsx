@@ -92,13 +92,14 @@ export default function Home() {
   
   {/* Logo */}
   <div className="flex items-center flex-shrink-0">
-    <div className="flex items-center flex-shrink-0 -ml-2 md:ml-0">
+    <div className="flex items-center flex-shrink-0 -ml-35 md:ml-0">
   <img
     src="/logo.png"
     alt="Drug Drop RX"
-    className="h-10 md:h-12 lg:h-13 w-auto object-contain -translate-x-14"
+    className="h-7 sm:h-9 md:h-12 lg:h-14 w-auto object-contain -translate-x-4"
   />
 </div>
+
 
   </div>
 
